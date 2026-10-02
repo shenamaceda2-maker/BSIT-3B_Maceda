@@ -3,9 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shenna M. Maceda - Personal Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c09110;
+            --secondary: #e6a61c;
+            --accent: #e3f2fd;
+            --dark: #263238;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Times New Roman', Times, serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        .main-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(13, 71, 161, 0.12);
+            overflow: hidden;
+        }
+
+        .page-header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        .page-body {
+            padding: 35px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 25px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            font-size: 15px;
+            color: #37474f;
+        }
+
+        .edu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .edu-table th {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .edu-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+        }
+
+        .edu-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .level {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .edu-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Project_Activity_System</h1>
+    <div class="main-wrapper">
+        <!-- HEADER -->
+        <header class="page-header">
+            <h1>Shenna M. Maceda</h1>
+            <p class="tagline">Personal Profile</p>
+        </header>
+
+        <main class="page-body">
+            
+            <section class="section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="info-grid">
+                    <!-- PERSONAL INFORMATION -->
+                </div>
+            </section>
+
+            
+            <section class="section">
+                <h2 class="section-title">Educational Background</h2>
+                <table class="edu-table">
+                    <!-- EDUCATIONAL BACKGROUND -->
+                    
+                </table>
+            </section>
+
+            <p class="footer-note">
+                ✅ draft — October 2026
+            </p>
+        </main>
+    </div>
 </body>
 </html>
