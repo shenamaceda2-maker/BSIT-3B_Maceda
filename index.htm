@@ -9,40 +9,66 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
-
         :root {
             --primary: #c09110;
             --secondary: #e6a61c;
-            --accent: #e3f2fd;
-            --dark: #263238;
+            --accent: #fff8e1;
+            --dark: #423400;
         }
-
         body {
             font-family: 'Segoe UI', Roboto, 'Times New Roman', Times, serif;
-            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            background: linear-gradient(135deg, #fff9e6 0%, #f7e9c4 100%);
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 0;
             color: var(--dark);
             line-height: 1.7;
         }
 
-        .main-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(13, 71, 161, 0.12);
-            overflow: hidden;
+        /* Navigation Bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 12px 20px;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(192, 145, 16, 0.2);
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.25);
         }
 
+        .main-wrapper {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(192, 145, 16, 0.15);
+            overflow: hidden;
+        }
         .page-header {
             background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             padding: 35px;
             text-align: center;
         }
-
         .page-header h1 {
             font-size: 30px;
             font-weight: 700;
@@ -50,20 +76,16 @@
             letter-spacing: 1px;
             margin-bottom: 5px;
         }
-
         .tagline {
             font-size: 17px;
             opacity: 0.9;
         }
-
         .page-body {
             padding: 35px;
         }
-
         .section {
             margin-bottom: 35px;
         }
-
         .section-title {
             font-size: 20px;
             font-weight: 700;
@@ -72,33 +94,27 @@
             border-bottom: 2px solid var(--accent);
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
-
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px 25px;
         }
-
         .info-label {
             font-weight: 600;
             color: var(--dark);
             font-size: 14px;
             text-transform: uppercase;
         }
-
         .info-value {
             font-size: 15px;
-            color: #37474f;
+            color: #5c4a00;
         }
-
         .edu-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
         }
-
         .edu-table th {
             background: var(--accent);
             color: var(--primary);
@@ -108,31 +124,39 @@
             text-transform: uppercase;
             border-bottom: 2px solid var(--primary);
         }
-
         .edu-table td {
             padding: 14px 18px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #f0e6c8;
             font-size: 15px;
         }
-
         .edu-table tr:last-child td {
             border-bottom: none;
         }
-
         .level {
             font-weight: 600;
             color: var(--primary);
         }
-
+        .back-to-top {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .back-to-top a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .back-to-top a:hover {
+            text-decoration: underline;
+        }
         .footer-note {
             margin-top: 20px;
             padding-top: 15px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #f0e6c8;
             font-size: 14px;
-            color: #777;
+            color: #8a7228;
             text-align: center;
         }
-
         @media (max-width: 600px) {
             .info-grid {
                 grid-template-columns: 1fr;
@@ -141,37 +165,101 @@
                 display: block;
                 overflow-x: auto;
             }
+            .navbar ul {
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#personal">Personal Information</a></li>
+            <li><a href="#education">Educational Background</a></li>
+        </ul>
+    </nav>
+
     <div class="main-wrapper">
         <!-- HEADER -->
-        <header class="page-header">
+        <header class="page-header" id="top">
             <h1>Shenna M. Maceda</h1>
-            <p class="tagline">Personal Profile</p>
+            <p class="tagline">Personal Profile & Educational Background</p>
         </header>
 
         <main class="page-body">
-            
-            <section class="section">
+            <!-- PERSONAL INFORMATION -->
+            <section class="section" id="personal">
                 <h2 class="section-title">Personal Information</h2>
                 <div class="info-grid">
-                    <!-- PERSONAL INFORMATION -->
+                    <div>
+                        <span class="info-label">Full Name:</span>
+                        <span class="info-value">Shenna M. Maceda</span>
+                    </div>
+                    <div>
+                        <span class="info-label">Date of Birth:</span>
+                        <span class="info-value">May 28, 2004</span>
+                    </div>
+                    <div>
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">22 years old</span>
+                    </div>
+                    <div>
+                        <span class="info-label">Place of Birth:</span>
+                        <span class="info-value">Brgy. Cabacungan, Dulag, Leyte</span>
+                    </div>
+                    <div>
+                        <span class="info-label">Religion:</span>
+                        <span class="info-value">Roman Catholic</span>
+                    </div>
+                    <div></div>
+                    <!-- Father & Mother — SIDE BY SIDE -->
+                    <div>
+                        <span class="info-label">Father:</span>
+                        <span class="info-value">Simeon Maceda</span>
+                    </div>
+                    <div>
+                        <span class="info-label">Mother:</span>
+                        <span class="info-value">Analyn Mullera</span>
+                    </div>
                 </div>
+                <p class="back-to-top"><a href="#top">↑ Back to Top</a></p>
             </section>
 
-            
-            <section class="section">
+            <!-- EDUCATIONAL BACKGROUND -->
+            <section class="section" id="education">
                 <h2 class="section-title">Educational Background</h2>
                 <table class="edu-table">
-                    <!-- EDUCATIONAL BACKGROUND -->
-                    
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>School & Location</th>
+                            <th>Year Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="level">Elementary</td>
+                            <td>Cabacungan Elementary School<br>Cabacungan, Dulag, Leyte</td>
+                            <td>2011 – 2018</td>
+                        </tr>
+                        <tr>
+                            <td class="level">Junior High School</td>
+                            <td>Cabacungan National High School<br>Cabacungan, Dulag, Leyte</td>
+                            <td>Same as Senior High</td>
+                        </tr>
+                        <tr>
+                            <td class="level">Senior High School</td>
+                            <td>Cabacungan National High School<br>Cabacungan, Dulag, Leyte<br><em>Strand: ABM — Accounting, Business, and Management</em></td>
+                            <td>2023 – 2024</td>
+                        </tr>
+                    </tbody>
                 </table>
+                <p class="back-to-top"><a href="#top">↑ Back to Top</a></p>
             </section>
 
             <p class="footer-note">
-                ✅ draft — October 2026
+                ✅ Complete activity2 — Updated October 2026
             </p>
         </main>
     </div>
