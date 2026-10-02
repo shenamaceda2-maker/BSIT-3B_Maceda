@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shenna M. Maceda - Educational Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c09110;
+            --secondary: #e6a61c;
+            --accent: #fff8e1;
+            --dark: #423400;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Times New Roman', Times, serif;
+            background: linear-gradient(135deg, #fff9e6 0%, #f7e9c4 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        .edu-wrapper {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(192, 145, 16, 0.15);
+            overflow: hidden;
+        }
+
+        .page-header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subhead {
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        .page-body {
+            padding: 35px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .edu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .edu-table th {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .edu-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #f0e6c8;
+            font-size: 15px;
+        }
+
+        .edu-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .level {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .nav-link {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .nav-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .edu-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="edu-wrapper">
+        <header class="page-header">
+            <h1>Educational Background</h1>
+            <p class="subhead">Shenna M. Maceda</p>
+        </header>
+
+        <main class="page-body">
+            <h2 class="section-title">Education History</h2>
+            <table class="edu-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>School & Location</th>
+                        <th>Year Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="level">Elementary</td>
+                        <td>Cabacungan Elementary School<br>Cabacungan, Dulag, Leyte</td>
+                        <td>2011 – 2018</td>
+                    </tr>
+                    <tr>
+                        <td class="level">Junior High School</td>
+                        <td>Cabacungan National High School<br>Cabacungan, Dulag, Leyte</td>
+                        <td>Same as Senior High</td>
+                    </tr>
+                    <tr>
+                        <td class="level">Senior High School</td>
+                        <td>Cabacungan National High School<br>Cabacungan, Dulag, Leyte<br><em>Strand: ABM — Accounting, Business, and Management</em></td>
+                        <td>2023 – 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="nav-link">
+                <a href="profile.html">← Back to Personal Profile</a>
+            </p>
+        </main>
+    </div>
+</body>
+</html>
